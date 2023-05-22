@@ -7,15 +7,12 @@ function iniciar(){
 }
 
 function confere1(){
-    let botoes = document.querySelector('.q1');
+    //debugger;
+    let botoes = document.getElementsByName('q1');
 
-    if(botoes[0].checked){
-        console.log('1');
-    }else if(botoes[1].checked){
-        console.log('2');
-    }else if(botoes[2].checked){
-        console.log('3');
-    }else{
-        console.log('4');
+    for(let i = 0; i < botoes.length; i++){
+        if(botoes[i].checked){
+            console.log(`opção ${i+1} selecionada`);
+        }
     }
 }
