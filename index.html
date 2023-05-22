@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convite para alguma coisa</title>
+    <link rel="shortcut icon" href="./assets/img/favcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="convite">
+            <p class="convite-frase">
+                <span style="--d: 1s">Olá guilherme 🐏 medina</span>
+                <span style="--d: 1.5s">Esse site é para lhe convidar para algo</span>
+                <span style="--d: 2s">mas o que será esse algo?</span>
+                <span style="--d: 2.5s">você precisara resolver um pequeno quiz de one piece para descobrir...</span>
+            </p>
+            <button class="iniciar-quiz" style="--d: 4.5s" onclick="iniciar()">Vamos começar</button>
+        </section>
+        <form class="formulario">
+            <fieldset class="ques1">
+                <legend>Quando Luffy e sua tripulação chegam em Skypiea a cidade do céu, descobrem que existe um Deus nesse lugar, quem é ele?</legend>
+                <div class="opcoes">
+                    <div>
+                        <input type="radio" id="selec1" name="q1" value="1" required>
+                        <label for="select1">God Ussop</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="selec2" name="q1" value="2" required>
+                        <label for="select2">Shanks</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="selec3" name="q1" value="3" required>
+                        <label for="select3">Enel</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="selec4" name="q1" value="4" required>
+                        <label for="select4">Kaido</label>
+                    </div>
+                </div>
+                <div class="input-submit">
+                    <button class="resposta" onclick="confere1()">Responder</button>
+                </div>
+            </fieldset>
+            <!-- <fieldset class="ques2">
+                <legend>Qual o Nome do avô de Luffy?</legend>
+                <div class="opcoes">
+                    <div>
+                        <input type="radio" id="selec5" name="q2" value="1" required>
+                        <label for="select1">Monkey D.Dragon</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="selec6" name="q2" value="2" required>
+                        <label for="select2">Monkey D.Noni</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="selec7" name="q2" value="3" required>
+                        <label for="select3">Monkey D.Garp</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="selec8" name="q2" value="4" required>
+                        <label for="select4">Monkey D.Sengoku</label>
+                    </div>
+                </div>
+                <div class="input-submit">
+                    <button class="resposta" onclick="confere2()">Responder</button>
+                </div>
+            </fieldset> -->
+        </form>
+    </main>
+</body>
+</html>

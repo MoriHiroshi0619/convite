@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --cor01: #EFF2EB;
+    --cor02: #260101;
+    --cor03: #8CA685;
+    --cor04: #7EA1BF;
+    --cor05: #516DA6;
+    --mainFont: 'Playfair Display', serif;
+    --d: 0s;
+    --sombra: rgba(0, 0, 0, 0.34);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--mainFont);
+    /* border: 1px solid red; */
+}
+
+body{
+    background-color: var(--cor01);
+    height: 100vh;
+    width: 100vw;
+}
+
+.convite{
+    height: 100vh;
+    width: 100vw;
+    display: none; /*none*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.convite-frase span{
+    display: block;
+    font-style: italic;
+    font-size: 1.5rem;
+    text-align: center;
+    /* opacity: 0;
+    animation: aparecer 0.5s forwards var(--d); */
+}
+
+.iniciar-quiz{
+    font-size: 1.2rem;
+    font-style: italic;
+    cursor: pointer;
+    padding: 5px;
+    margin: 3px;
+    background-color: var(--cor03);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 5px var(--sombra);
+    transition: .5s;
+    /* opacity: 0;
+    animation: aparecer 0.5s forwards var(--d); */
+}
+.iniciar-quiz:hover{
+    transform: scale(1.1);
+}
+
+.formulario{
+    width: 100vw;
+    display: flex; /*flex*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+fieldset{
+    width: 80%;
+    border: 2px solid var(--cor05);
+    border-radius: 20px;
+}
+
+legend{
+    background-color: var(--cor04);
+    padding: 3px 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--cor01);
+}
+
+.opcoes{
+    display: flex;
+    margin: 5px;
+    justify-content: space-evenly;
+    color: var(--cor02);
+}
+
+.input-submit{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resposta{
+    font-size: 1.1rem;
+    padding: 2px 10px;
+    background-color: var(--cor03);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: var(--cor02);
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px var(--sombra);
+}
+.resposta:hover{
+    transform: scale(1.1);
+}
+
+.ques2{
+    display: none;
+}
+
+@keyframes aparecer{
+    from{
+        transform: translateY(20px);
+    }to{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Olá guilherme 🐏 medina
+
+Esse site é para lhe convidar para algo
+
+mas o que será esse algo?
+
+você precisara resolver um pequeno quiz de one piece para descobrir
+ */
