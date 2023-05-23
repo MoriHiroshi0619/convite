@@ -6,7 +6,7 @@ function iniciar(){
     formulario.style.display = 'flex';
 }
 
-function confere1(event){
+function confere1(){
     //debugger;
     let botoes = document.getElementsByName('q1');
     
