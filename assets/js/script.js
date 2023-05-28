@@ -96,7 +96,7 @@ function confere4(){
             console.log(botoes[i].value);
             if(botoes[i].value == '2'){
                 questao1.classList.add('acerto');
-                
+                //função que chama as mundanças de aparecimento do convite 
             }
             if(botoes[i].value != '2'){
                 questao1.classList.add('error');

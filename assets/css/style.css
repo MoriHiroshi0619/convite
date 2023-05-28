@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 :root{
-    --cor01: #EFF2EB;
+    --cor01: #f9fff5;
     --cor02: #260101;
     --cor03: #8CA685;
     --cor04: #7EA1BF;
@@ -22,6 +22,9 @@ body{
     background-color: var(--cor01);
     height: 100vh;
     width: 100vw;
+    /*
+    atraves do js. qunado o convite aparecer tranformar overflow hidden
+    */
 }
 
 .convite{
@@ -90,101 +93,100 @@ legend{
 
 .opcoes{
     display: flex;
+    min-height: 60px;
     margin: 5px;
     justify-content: space-evenly;
-    color: var(--cor02);
-}
-
-.input-submit{
-    margin: 5px;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    color: var(--cor02);
 }
 
-.resposta{
-    font-size: 1.1rem;
-    padding: 2px 10px;
-    background-color: var(--cor03);
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: var(--cor02);
-    transition: 0.5s;
-    box-shadow: 0px 0px 10px var(--sombra);
+.input-radio{
+    border: 1px solid red;
 }
-.resposta:hover{
-    transform: scale(1.1);
-}
+
+
 .ques1{
     margin-top: 50px;
 }
 .ques2{
+    visibility: hidden;
     opacity: 0;
 }
 
 .ques3{
+    visibility: hidden;
     opacity: 0;
 }
 
 .ques4{
+    visibility: hidden;
     opacity: 0;
 }
+/* f9fff5 */
 
-.mostrar-container{
-    border: 1px solid #ff0000;
-    background-color: #f9fff5;
-    perspective: 1000;
+
+.convite-container{
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    background-color: #f9fff5;
+    width: 100%;
+    height: 100%;
+    /*colocar no atraves do js transition de 1s*/
 }
 
-.convite-front{
+.convite-card{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
-.img-convite{
-    position: relative;
-    border: 1px solid var(--cor02);
-    border-radius: 20px;
+.img-front{
     width: 100%; /*mobile 90vw*/ /*pc 100%*/
+    border-radius: 20px;
+    border: 1px solid var(--cor02);
     transition: 1s;
     transform-style: preserve-3d;
-    transform-origin: center;
-    /* transform: rotate3d(1, 1, 0, 20deg); */
-    
+    transform-origin: center;   
+    /*transform: rotate3d(-1, 1, 0, 20deg);
     animation: float-convite 10s ease-in-out infinite; 
-    /* animation: aparece-convite 4s ease-out; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.291);  */
+    /* animation: aparece-convite 4s ease-out; */  
+}
+
+.convite-appear{
+    animation: aparece-convite 4s ease-out;
+}
+.convite-float{
+    transform: rotate3d(-1, 1, 0, 20deg);
+    animation: float-convite 10s ease-in-out infinite; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.291); 
 }
 
 @keyframes float-convite{
-    0% {
-        transform: rotate3d(0, 0, 0, 0deg) translate(0, 0);
-      }
-      25% {
-        transform: rotate3d(0, 0, 1, 20deg) translate(100px, -100px);
-      }
-      50% {
-        transform: rotate3d(0, 0, 1, 40deg) translate(-100px, -100px);
-      }
-      75% {
-        transform: rotate3d(0, 0, 1, 60deg) translate(-100px, 100px);
-      }
-      100% {
-        transform: rotate3d(0, 0, 1, 80deg) translate(100px, 100px);
-      }
+    0%{
+        transform: rotate3d(1, -1, 0, 20deg);
+    }
+    25%{
+        transform: rotate3d(1, 1, 0, 20deg);
+    }
+    50%{
+        transform: rotate3d(-1, 1, 0, 20deg);
+    }
+    75%{
+        transform: rotate3d(-1, -1, 0, 20deg);
+    }
+    100%{
+        transform: rotate3d(1, -1, 0, 20deg);
+    }
 }
 
 @keyframes aparece-convite{
     from{
-        transform: rotate3d(0,0,0,0deg);
+        transform: rotate3d(0,0,0,0deg) scale(0.1);
     }to{
-        transform: rotate3d(1, 1, 1, 1440deg);
+        transform: rotate3d(1, 1, 1, 1440deg) scale(1);
 
     }
 }
