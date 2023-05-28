@@ -132,21 +132,61 @@ legend{
     opacity: 0;
 }
 
-.mostrar-convite{
+.mostrar-container{
     border: 1px solid #ff0000;
+    background-color: #f9fff5;
+    perspective: 1000;
     position: absolute;
     height: 100vh;
     width: 100vw;
 }
-.convite-back{
+
+.convite-front{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .img-convite{
-    width: 300px;
+    position: relative;
+    border: 1px solid var(--cor02);
+    border-radius: 20px;
+    width: 100%; /*mobile 90vw*/ /*pc 100%*/
+    transition: 1s;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    /* transform: rotate3d(1, 1, 0, 20deg); */
     
+    animation: float-convite 10s ease-in-out infinite; 
+    /* animation: aparece-convite 4s ease-out; */
+}
+
+@keyframes float-convite{
+    0% {
+        transform: rotate3d(0, 0, 0, 0deg) translate(0, 0);
+      }
+      25% {
+        transform: rotate3d(0, 0, 1, 20deg) translate(100px, -100px);
+      }
+      50% {
+        transform: rotate3d(0, 0, 1, 40deg) translate(-100px, -100px);
+      }
+      75% {
+        transform: rotate3d(0, 0, 1, 60deg) translate(-100px, 100px);
+      }
+      100% {
+        transform: rotate3d(0, 0, 1, 80deg) translate(100px, 100px);
+      }
+}
+
+@keyframes aparece-convite{
+    from{
+        transform: rotate3d(0,0,0,0deg);
+    }to{
+        transform: rotate3d(1, 1, 1, 1440deg);
+
+    }
 }
 
 .aparece{
