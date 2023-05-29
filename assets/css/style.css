@@ -93,15 +93,34 @@ legend{
 
 .opcoes{
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     min-height: 60px;
-    margin: 5px;
+    margin: 20px;
     justify-content: space-evenly;
     align-items: center;
     color: var(--cor02);
 }
 
-.input-radio{
-    border: 1px solid red;
+input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+}
+
+.input-radio label{
+    width: auto;
+    cursor: pointer;
+    background-color: var(--cor03);
+    border-radius: 10px;
+    padding: 3px 10px;
+    color: var(--cor01);
+    transition: 1s;
+}
+.input-radio label span{
+    text-align: center;
+}
+.input-radio:hover label{
+    background-color: var(--cor05);
 }
 
 
@@ -119,6 +138,7 @@ legend{
 }
 
 .ques4{
+    margin-bottom: 50px;
     visibility: hidden;
     opacity: 0;
 }
@@ -127,7 +147,7 @@ legend{
 
 .convite-container{
     visibility: hidden;
-    opacity: 0;
+    opacity: 0; 
     position: absolute;
     background-color: #f9fff5;
     width: 100%;
@@ -149,9 +169,9 @@ legend{
     transition: 1s;
     transform-style: preserve-3d;
     transform-origin: center;   
-    /*transform: rotate3d(-1, 1, 0, 20deg);
-    animation: float-convite 10s ease-in-out infinite; 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.291);  */
+    transform: rotate3d(-1, 1, 0, 20deg);
+    /* animation: float-convite 10s ease-in-out infinite; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.291);  */ 
     /* animation: aparece-convite 4s ease-out; */  
 }
 
@@ -199,6 +219,7 @@ legend{
     from{
         transform: translateY(20px);
     }to{
+        visibility: visible;
         opacity: 1;
         transform: none;
     }

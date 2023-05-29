@@ -36,6 +36,7 @@ function confere2(){
     let questao2 = document.querySelector('.ques3');
 
     questao1.style.opacity = 1;
+    questao1.style.visibility = 'visible';
     questao1.classList.remove('aparece');
     
     for(let i = 0; i < botoes.length; i++){
@@ -62,6 +63,7 @@ function confere3(){
     let questao2 = document.querySelector('.ques4');
 
     questao1.style.opacity = 1;
+    questao1.style.visibility = 'visible';
     questao1.classList.remove('aparece');
     
     for(let i = 0; i < botoes.length; i++){
@@ -88,6 +90,7 @@ function confere4(){
     let botoes = document.getElementsByName('q4');
 
     questao1.style.opacity = 1;
+    questao1.style.visibility = 'visible';
     questao1.classList.remove('aparece');
     
     for(let i = 0; i < botoes.length; i++){
