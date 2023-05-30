@@ -27,10 +27,6 @@ body{
     */
 }
 
-.convite *{
-    border: 1px solid red;
-}
-
 .convite{
     height: 100vh;
     width: 100vw;

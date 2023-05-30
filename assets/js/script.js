@@ -56,6 +56,7 @@ function confere2(){
         }
     }
 }
+
 function confere3(){
     //debugger;
     let questao1 = document.querySelector('.ques3');
@@ -128,6 +129,6 @@ function mostrarConvite(){
     setTimeout(()=>{
         convite.style.setProperty('transform', 'rotate3d(-1, 1, 0, 20deg');
         convite.style.setProperty('box-shadow', '0 0 20px rgba(0, 0, 0, 0.291)');
-        convite.style.animation = 'float-convite 10s ease-in-out infinite';
+        convite.style.animation = 'float-convite 12s ease-in-out infinite';
     }, 6000);
 }
