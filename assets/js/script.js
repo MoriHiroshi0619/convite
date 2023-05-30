@@ -99,7 +99,7 @@ function confere4(){
             console.log(botoes[i].value);
             if(botoes[i].value == '2'){
                 questao1.classList.add('acerto');
-                //função que chama as mundanças de aparecimento do convite 
+                mostrarConvite();
             }
             if(botoes[i].value != '2'){
                 questao1.classList.add('error');
@@ -109,4 +109,25 @@ function confere4(){
             }
         }
     }
+}
+
+function mostrarConvite(){
+    let container = document.querySelector('.convite-container');
+    let convite = document.querySelector('.img-front');
+    let formulario = document.querySelector('.formulario');
+    formulario.style.display = 'none';
+    container.style.setProperty('transition', '1s');
+    document.title = 'Convite de Casamento';
+
+    document.querySelector("link[rel*='icon']").href = "./assets/img/casamento-favcon.png";
+
+    container.style.visibility = 'visible';
+    container.style.opacity = '1';
+    
+    convite.style.setProperty('animation', 'aparece-convite 6s ease-out');
+    setTimeout(()=>{
+        convite.style.setProperty('transform', 'rotate3d(-1, 1, 0, 20deg');
+        convite.style.setProperty('box-shadow', '0 0 20px rgba(0, 0, 0, 0.291)');
+        convite.style.animation = 'float-convite 10s ease-in-out infinite';
+    }, 6000);
 }
