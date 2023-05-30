@@ -50,6 +50,7 @@ body{
 
 .iniciar-quiz{
     font-size: 1.2rem;
+    color: var(--cor01);
     cursor: pointer;
     padding: 5px;
     margin: 3px;
@@ -285,6 +286,10 @@ input[type="radio"]{
 }
 
 @media (max-width: 420px){
+    .convite{
+        margin: auto;
+        width: 95vw;
+    }
     fieldset{
         width: 95%;
     }
