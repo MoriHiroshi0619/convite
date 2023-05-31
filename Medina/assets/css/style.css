@@ -168,7 +168,7 @@ input[type="radio"]{
 
 .img-front{
     width: 95%; /*mobile 90vw*/ /*pc 100%*/
-    max-height: 860px;
+    max-height: 660px;
     border-radius: 20px;
     border: 1px solid var(--cor02);
     transition: 1s;
