@@ -116,6 +116,12 @@ function mostrarConvite(){
     let container = document.querySelector('.convite-container');
     let convite = document.querySelector('.img-front');
     let formulario = document.querySelector('.formulario');
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // opcional: adiciona um efeito de rolagem suave
+      });
+
     formulario.style.display = 'none';
     container.style.setProperty('transition', '1s');
     document.title = 'Convite de Casamento';
@@ -131,4 +137,6 @@ function mostrarConvite(){
         convite.style.setProperty('box-shadow', '0 0 20px rgba(0, 0, 0, 0.291)');
         convite.style.animation = 'float-convite 12s ease-in-out infinite';
     }, 6000);
+
+
 }
