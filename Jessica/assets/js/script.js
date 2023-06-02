@@ -117,10 +117,7 @@ function mostrarConvite(){
     let convite = document.querySelector('.img-front');
     let formulario = document.querySelector('.formulario');
 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // opcional: adiciona um efeito de rolagem suave
-      });
+    window.scrollTo(0,0);
 
     formulario.style.display = 'none';
     container.style.setProperty('transition', '1s');
