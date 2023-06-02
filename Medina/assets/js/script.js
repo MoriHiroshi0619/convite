@@ -117,7 +117,7 @@ function mostrarConvite(){
     let convite = document.querySelector('.img-front');
     let formulario = document.querySelector('.formulario');
 
-    window.scrollTo(0,0);
+    window.scrollHeight = 0;
 
     formulario.style.display = 'none';
     container.style.setProperty('transition', '1s');
